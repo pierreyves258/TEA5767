@@ -5,8 +5,6 @@
   
   Connect SDA to A4 on Arduino UNO or 20 on Arduino MEGA
   Connect SCL to A5 on Arduino UNO or 21 on Arduino MEGA
-  
-  Use 75cm antenna
 */
 
 #include <TEA5767.h>
