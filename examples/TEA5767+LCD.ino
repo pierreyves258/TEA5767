@@ -6,6 +6,8 @@
   Connect SDA to A4 on Arduino UNO or 20 on Arduino MEGA
   Connect SCL to A5 on Arduino UNO or 21 on Arduino MEGA
   Schema available on this directory: schema/Schema.jpg (You must add TEA5767)
+  
+  Use 75cm antenna
 */
 
 #define BT_NEXT_STA 7
