@@ -7,8 +7,11 @@
   Connect SCL to A5 on Arduino UNO or 21 on Arduino MEGA
   
   Use 75cm antenna
+  
+  You MUST include Wire.h
 */
 
+#include <Wire.h>
 #include <TEA5767.h>
 
 #define delays(x); delay(x*1000); //delay function but with seconds
@@ -25,7 +28,7 @@ void setup()
 void loop()
 {
 	Serial.print(FM.readFrequency()); Serial.println(" FM"); //Print frequency
-	(FM.isStereo())?Serial.println("Stereo");:Serial.println("Mono"); //Print channel
+	if(FM.isStereo()) {Serial.println("Stereo"); Serial.println("Mono");} //Print channel
 	Serial.print(FM.signalQuality()); Serial.println("/16"); //Print signal quality
 	Serial.println("\n"); //Jump 2 lines
 	delays(10); //evry 10 seconds (same as delay(10000))

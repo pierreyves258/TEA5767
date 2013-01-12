@@ -7,8 +7,6 @@
 #define Morse_h
 
 #include "Arduino.h"
-#include "WProgram.h"
-#include <Wire.h>
 
 #define ADDR 0x60
 #define SEARCHUP 0xD0
@@ -20,7 +18,7 @@ class TEA5767
   public:
 	TEA5767();	//done
 	void begin();
-	bool isSearchMode();	//done
+	boolean isSearchMode();	//done
 	int signalQuality(); //done
 	double readFrequency(); //done
 	void setFrequency(double); //done
@@ -30,12 +28,12 @@ class TEA5767
 	void previousStation(); //done
 	void nextFrequency(); //done
 	void previousFrequency(); //done
-	bool isStereo(); //done
+	boolean isStereo(); //done
   private:
-	bool _search_mode=false;
-	double _freq_available=0; 
-	bool _channelN=false;
-	int _signal_quality=0;
+	boolean _search_mode;
+	double _freq_available; 
+	bool _channelN;
+	int _signal_quality;
 	unsigned char _buffer[5];
 	void _read();
 	double _frequency;
