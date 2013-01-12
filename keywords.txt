@@ -1,0 +1,12 @@
+TEA5767	KEYWORD1
+
+isSearchMode KEYWORD2
+signalQuality KEYWORD2
+readFrequency KEYWORD2
+setFrequency KEYWORD2
+nextStation KEYWORD2
+PreviousStation KEYWORD2
+nextFrequency KEYWORD2
+previousFrequency KEYWORD2
+isStereo KEYWORD2
+begin KEYWORD2
