@@ -41,7 +41,7 @@ void setup()
 void loop()
 {
 	lcd.print(FM.readFrequency()); lcd.print(" FM"); //Display frequency
-	(FM.isSearchMode())?lcd.serCursor(12,0); lcd.print("SCAN");:lcd.serCursor(12,0); lcd.print("    "); //Display scann
+	(FM.isSearchMode())?lcd.setCursor(12,0); lcd.print("SCAN");:lcd.setCursor(12,0); lcd.print("    "); //Display scann
 	lcd.setCursor(0,1); lcd.print("LEVEL: "); lcd.print(FM.signalQuality()); lcd.print("/16 ");
 	(FM.isStereo())?lcd.print("STE");:lcd.print("MONO"); //Display channel MONO or STEREO
 	delays(1); //same as delay(1000) Wait 1 second.
